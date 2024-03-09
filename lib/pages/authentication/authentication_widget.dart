@@ -1,3 +1,4 @@
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -177,7 +178,9 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget>
                                     unselectedLabelColor:
                                         FlutterFlowTheme.of(context)
                                             .secondaryText,
-                                    labelPadding: const EdgeInsets.all(16.0),
+                                    labelPadding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            16.0, 16.0, 16.0, 16.0),
                                     labelStyle: FlutterFlowTheme.of(context)
                                         .displaySmall,
                                     unselectedLabelStyle:
@@ -1074,45 +1077,84 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget>
                                                           context)
                                                       .accent4,
                                                 ),
-                                                Divider(
-                                                  thickness: 1.0,
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .accent4,
-                                                ),
-                                                Align(
-                                                  alignment:
-                                                      const AlignmentDirectional(
-                                                          0.0, 0.0),
-                                                  child: Padding(
-                                                    padding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 0.0,
-                                                                0.0, 16.0),
-                                                    child: FFButtonWidget(
+                                                StreamBuilder<
+                                                    List<UserDataRecord>>(
+                                                  stream: queryUserDataRecord(
+                                                    singleRecord: true,
+                                                  ),
+                                                  builder: (context, snapshot) {
+                                                    // Customize what your widget looks like when it's loading.
+                                                    if (!snapshot.hasData) {
+                                                      return Center(
+                                                        child: SizedBox(
+                                                          width: 50.0,
+                                                          height: 50.0,
+                                                          child:
+                                                              CircularProgressIndicator(
+                                                            valueColor:
+                                                                AlwaysStoppedAnimation<
+                                                                    Color>(
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .primary,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      );
+                                                    }
+                                                    List<UserDataRecord>
+                                                        buttonUserDataRecordList =
+                                                        snapshot.data!;
+                                                    // Return an empty Container when the item does not exist.
+                                                    if (snapshot
+                                                        .data!.isEmpty) {
+                                                      return Container();
+                                                    }
+                                                    final buttonUserDataRecord =
+                                                        buttonUserDataRecordList
+                                                                .isNotEmpty
+                                                            ? buttonUserDataRecordList
+                                                                .first
+                                                            : null;
+                                                    return FFButtonWidget(
                                                       onPressed: () async {
-                                                        if (_model
-                                                                .passwordController2
-                                                                .text ==
-                                                            _model
-                                                                .passwordController3
-                                                                .text) {
-                                                          context.pushNamed(
-                                                              'Offers');
-                                                        } else {
-                                                          return;
-                                                        }
+                                                        var userDataRecordReference =
+                                                            UserDataRecord
+                                                                .collection
+                                                                .doc();
+                                                        await userDataRecordReference
+                                                            .set(
+                                                                createUserDataRecordData(
+                                                          email: _model
+                                                              .emailAddressCreateController2
+                                                              .text,
+                                                          userName: _model
+                                                              .emailAddressCreateController1
+                                                              .text,
+                                                        ));
+                                                        _model.test = UserDataRecord
+                                                            .getDocumentFromData(
+                                                                createUserDataRecordData(
+                                                                  email: _model
+                                                                      .emailAddressCreateController2
+                                                                      .text,
+                                                                  userName: _model
+                                                                      .emailAddressCreateController1
+                                                                      .text,
+                                                                ),
+                                                                userDataRecordReference);
+
+                                                        setState(() {});
                                                       },
-                                                      text: 'Sign Up',
+                                                      text: 'Button',
                                                       options: FFButtonOptions(
-                                                        width: 230.0,
-                                                        height: 52.0,
+                                                        height: 40.0,
                                                         padding:
                                                             const EdgeInsetsDirectional
                                                                 .fromSTEB(
+                                                                    24.0,
                                                                     0.0,
-                                                                    0.0,
-                                                                    0.0,
+                                                                    24.0,
                                                                     0.0),
                                                         iconPadding:
                                                             const EdgeInsetsDirectional
@@ -1143,10 +1185,16 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget>
                                                         ),
                                                         borderRadius:
                                                             BorderRadius
-                                                                .circular(40.0),
+                                                                .circular(8.0),
                                                       ),
-                                                    ),
-                                                  ),
+                                                    );
+                                                  },
+                                                ),
+                                                Divider(
+                                                  thickness: 1.0,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .accent4,
                                                 ),
                                               ],
                                             ),

@@ -1,3 +1,4 @@
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'authentication_widget.dart' show AuthenticationWidget;
@@ -44,6 +45,8 @@ class AuthenticationModel extends FlutterFlowModel<AuthenticationWidget> {
   // State field(s) for DropDown widget.
   String? dropDownValue;
   FormFieldController<String>? dropDownValueController;
+  // Stores action output result for [Backend Call - Create Document] action in Button widget.
+  UserDataRecord? test;
   // State field(s) for emailAddress_Create widget.
   FocusNode? emailAddressCreateFocusNode3;
   TextEditingController? emailAddressCreateController3;

@@ -26,5 +26,7 @@
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:992376148336:ios:9e50f2445befd55629ffb5</string>
+	<key>DATABASE_URL</key>
+	<string>https://savely-a-i-nbyd6r-default-rtdb.europe-west1.firebasedatabase.app</string>
 </dict>
 </plist>
