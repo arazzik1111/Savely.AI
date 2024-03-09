@@ -435,7 +435,7 @@ class _CreateRestaurantWidgetState extends State<CreateRestaurantWidget> {
                               if (_model.checkboxValue!) {
                                 if (_model.dropDownValue != null &&
                                     _model.dropDownValue != '') {
-                                  context.pushNamed('Offers');
+                                  context.pushNamed('OffersRestaurant');
                                 } else {
                                   return;
                                 }

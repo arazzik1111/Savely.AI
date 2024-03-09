@@ -1,4 +1,5 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/form_field_controller.dart';
 import 'authentication_widget.dart' show AuthenticationWidget;
 import 'package:flutter/material.dart';
 
@@ -16,33 +17,46 @@ class AuthenticationModel extends FlutterFlowModel<AuthenticationWidget> {
   TextEditingController? emailAddressController;
   String? Function(BuildContext, String?)? emailAddressControllerValidator;
   // State field(s) for password widget.
-  FocusNode? passwordFocusNode;
-  TextEditingController? passwordController;
-  late bool passwordVisibility;
-  String? Function(BuildContext, String?)? passwordControllerValidator;
+  FocusNode? passwordFocusNode1;
+  TextEditingController? passwordController1;
+  late bool passwordVisibility1;
+  String? Function(BuildContext, String?)? passwordController1Validator;
   // State field(s) for emailAddress_Create widget.
-  FocusNode? emailAddressCreateFocusNode;
-  TextEditingController? emailAddressCreateController;
+  FocusNode? emailAddressCreateFocusNode1;
+  TextEditingController? emailAddressCreateController1;
   String? Function(BuildContext, String?)?
-      emailAddressCreateControllerValidator;
-  // State field(s) for passwordConfirm widget.
-  FocusNode? passwordConfirmFocusNode1;
-  TextEditingController? passwordConfirmController1;
-  late bool passwordConfirmVisibility1;
-  String? Function(BuildContext, String?)? passwordConfirmController1Validator;
-  // State field(s) for passwordConfirm widget.
-  FocusNode? passwordConfirmFocusNode2;
-  TextEditingController? passwordConfirmController2;
-  late bool passwordConfirmVisibility2;
-  String? Function(BuildContext, String?)? passwordConfirmController2Validator;
+      emailAddressCreateController1Validator;
+  // State field(s) for emailAddress_Create widget.
+  FocusNode? emailAddressCreateFocusNode2;
+  TextEditingController? emailAddressCreateController2;
+  String? Function(BuildContext, String?)?
+      emailAddressCreateController2Validator;
+  // State field(s) for password widget.
+  FocusNode? passwordFocusNode2;
+  TextEditingController? passwordController2;
+  late bool passwordVisibility2;
+  String? Function(BuildContext, String?)? passwordController2Validator;
+  // State field(s) for password widget.
+  FocusNode? passwordFocusNode3;
+  TextEditingController? passwordController3;
+  late bool passwordVisibility3;
+  String? Function(BuildContext, String?)? passwordController3Validator;
+  // State field(s) for DropDown widget.
+  String? dropDownValue;
+  FormFieldController<String>? dropDownValueController;
+  // State field(s) for emailAddress_Create widget.
+  FocusNode? emailAddressCreateFocusNode3;
+  TextEditingController? emailAddressCreateController3;
+  String? Function(BuildContext, String?)?
+      emailAddressCreateController3Validator;
 
   /// Initialization and disposal methods.
 
   @override
   void initState(BuildContext context) {
-    passwordVisibility = false;
-    passwordConfirmVisibility1 = false;
-    passwordConfirmVisibility2 = false;
+    passwordVisibility1 = false;
+    passwordVisibility2 = false;
+    passwordVisibility3 = false;
   }
 
   @override
@@ -52,17 +66,23 @@ class AuthenticationModel extends FlutterFlowModel<AuthenticationWidget> {
     emailAddressFocusNode?.dispose();
     emailAddressController?.dispose();
 
-    passwordFocusNode?.dispose();
-    passwordController?.dispose();
+    passwordFocusNode1?.dispose();
+    passwordController1?.dispose();
 
-    emailAddressCreateFocusNode?.dispose();
-    emailAddressCreateController?.dispose();
+    emailAddressCreateFocusNode1?.dispose();
+    emailAddressCreateController1?.dispose();
 
-    passwordConfirmFocusNode1?.dispose();
-    passwordConfirmController1?.dispose();
+    emailAddressCreateFocusNode2?.dispose();
+    emailAddressCreateController2?.dispose();
 
-    passwordConfirmFocusNode2?.dispose();
-    passwordConfirmController2?.dispose();
+    passwordFocusNode2?.dispose();
+    passwordController2?.dispose();
+
+    passwordFocusNode3?.dispose();
+    passwordController3?.dispose();
+
+    emailAddressCreateFocusNode3?.dispose();
+    emailAddressCreateController3?.dispose();
   }
 
   /// Action blocks are added here.

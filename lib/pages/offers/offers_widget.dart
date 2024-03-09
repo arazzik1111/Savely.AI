@@ -237,7 +237,14 @@ class _OffersWidgetState extends State<OffersWidget>
                                                           .spaceBetween,
                                                   children: [
                                                     Text(
-                                                      'pasta carbonare',
+                                                      'NOODLE PACK',
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyLarge,
+                                                    ),
+                                                    Text(
+                                                      'Noodle salad',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -252,7 +259,7 @@ class _OffersWidgetState extends State<OffersWidget>
                                                                   0.0,
                                                                   0.0),
                                                       child: Text(
-                                                        '11 Ron/night',
+                                                        '11 RON / pc',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -311,11 +318,27 @@ class _OffersWidgetState extends State<OffersWidget>
                                                           .spaceBetween,
                                                   children: [
                                                     Text(
-                                                      'Kfc',
+                                                      'KFC',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .bodyLarge,
+                                                    ),
+                                                    Text(
+                                                      '                hot pack box',
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyLarge
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Readex Pro',
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .normal,
+                                                              ),
                                                     ),
                                                     Padding(
                                                       padding:
@@ -326,7 +349,7 @@ class _OffersWidgetState extends State<OffersWidget>
                                                                   0.0,
                                                                   0.0),
                                                       child: Text(
-                                                        '13 Ron/night',
+                                                        '13 RON / pc',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -403,10 +426,36 @@ class _OffersWidgetState extends State<OffersWidget>
                                                                 .spaceBetween,
                                                         children: [
                                                           Text(
-                                                            'Salad Pack',
+                                                            'SALAD PACK',
                                                             style: FlutterFlowTheme
                                                                     .of(context)
-                                                                .bodyLarge,
+                                                                .bodyLarge
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  fontSize:
+                                                                      16.0,
+                                                                ),
+                                                          ),
+                                                          Align(
+                                                            alignment:
+                                                                const AlignmentDirectional(
+                                                                    1.0, -1.0),
+                                                            child: Text(
+                                                              '  Salad  with tomato',
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .center,
+                                                              style: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .bodyLarge
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Readex Pro',
+                                                                    fontSize:
+                                                                        16.0,
+                                                                  ),
+                                                            ),
                                                           ),
                                                           Padding(
                                                             padding:
@@ -417,7 +466,7 @@ class _OffersWidgetState extends State<OffersWidget>
                                                                         0.0,
                                                                         0.0),
                                                             child: Text(
-                                                              '14 Ron/night',
+                                                              '14 RON / pc',
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .titleLarge,
@@ -486,7 +535,13 @@ class _OffersWidgetState extends State<OffersWidget>
                                                                 .spaceBetween,
                                                         children: [
                                                           Text(
-                                                            'Mcdonald',
+                                                            'MCDONALD',
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyLarge,
+                                                          ),
+                                                          Text(
+                                                            'Combobox',
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyLarge,
@@ -500,7 +555,7 @@ class _OffersWidgetState extends State<OffersWidget>
                                                                         0.0,
                                                                         0.0),
                                                             child: Text(
-                                                              '16  Ron/night',
+                                                              '16  RON / pc',
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .titleLarge,
@@ -569,7 +624,13 @@ class _OffersWidgetState extends State<OffersWidget>
                                                                 .spaceBetween,
                                                         children: [
                                                           Text(
-                                                            'Pizza Napoleon',
+                                                            'PIZZA NAPO',
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyLarge,
+                                                          ),
+                                                          Text(
+                                                            'Pizza sunca',
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .bodyLarge,
@@ -583,7 +644,7 @@ class _OffersWidgetState extends State<OffersWidget>
                                                                         0.0,
                                                                         0.0),
                                                             child: Text(
-                                                              '14 Ron/night',
+                                                              '14 RON / pc',
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .titleLarge,
@@ -699,7 +760,7 @@ class _OffersWidgetState extends State<OffersWidget>
                                                             .fromSTEB(16.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: Text(
-                                                      '9 RON/night',
+                                                      '9 RON / pc',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -746,7 +807,7 @@ class _OffersWidgetState extends State<OffersWidget>
                                                             .fromSTEB(16.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: Text(
-                                                      '10 Ron/night',
+                                                      '10 RON / pc',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -811,7 +872,7 @@ class _OffersWidgetState extends State<OffersWidget>
                                                             .fromSTEB(16.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: Text(
-                                                      '10 Ron/night',
+                                                      '10 RON / pc',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -858,7 +919,7 @@ class _OffersWidgetState extends State<OffersWidget>
                                                             .fromSTEB(16.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: Text(
-                                                      '10 Ron/night',
+                                                      '10 RON / pc',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)

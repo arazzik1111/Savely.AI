@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "992376148336",
+    "project_id": "savely-a-i-nbyd6r",
+    "storage_bucket": "savely-a-i-nbyd6r.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:992376148336:android:0f825538a346effb29ffb5",
+        "android_client_info": {
+          "package_name": "com.mycompany.savelyai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWgcmkq4IWtjt2eXuDcgihYvqioZbwKD8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -8,3 +8,6 @@ export '/privacy/privacy_widget.dart' show PrivacyWidget;
 export '/contact/contact_widget.dart' show ContactWidget;
 export '/create_restaurant/create_restaurant_widget.dart'
     show CreateRestaurantWidget;
+export '/offers_restaurant/offers_restaurant_widget.dart'
+    show OffersRestaurantWidget;
+export '/add_items/add_items_widget.dart' show AddItemsWidget;
