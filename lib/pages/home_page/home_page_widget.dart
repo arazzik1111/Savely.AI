@@ -91,22 +91,18 @@ class _HomePageWidgetState extends State<HomePageWidget>
                   ),
                 ),
               ),
-              Opacity(
-                opacity: 0.9,
-                child: Align(
-                  alignment: const AlignmentDirectional(0.0, -0.88),
-                  child: Text(
-                    'Made with Love and 67% Off',
-                    textAlign: TextAlign.center,
-                    style: FlutterFlowTheme.of(context).displaySmall.override(
-                          fontFamily: 'Outfit',
-                          fontSize: 45.0,
-                          letterSpacing: 2.5,
-                          fontWeight: FontWeight.bold,
-                        ),
-                  ).animateOnPageLoad(
-                      animationsMap['textOnPageLoadAnimation']!),
-                ),
+              Align(
+                alignment: const AlignmentDirectional(0.0, -0.88),
+                child: Text(
+                  'Made with Love and 67% Off',
+                  textAlign: TextAlign.center,
+                  style: FlutterFlowTheme.of(context).displaySmall.override(
+                        fontFamily: 'Outfit',
+                        fontSize: 45.0,
+                        letterSpacing: 2.5,
+                        fontWeight: FontWeight.bold,
+                      ),
+                ).animateOnPageLoad(animationsMap['textOnPageLoadAnimation']!),
               ),
               Align(
                 alignment: const AlignmentDirectional(0.16, -0.23),

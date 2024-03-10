@@ -20,26 +20,20 @@ class UserDataRecord extends FirestoreRecord {
   String get email => _email ?? '';
   bool hasEmail() => _email != null;
 
+  // "user_name" field.
+  String? _userName;
+  String get userName => _userName ?? '';
+  bool hasUserName() => _userName != null;
+
   // "password" field.
   String? _password;
   String get password => _password ?? '';
   bool hasPassword() => _password != null;
 
-  // "city" field.
-  String? _city;
-  String get city => _city ?? '';
-  bool hasCity() => _city != null;
-
-  // "username" field.
-  String? _username;
-  String get username => _username ?? '';
-  bool hasUsername() => _username != null;
-
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
+    _userName = snapshotData['user_name'] as String?;
     _password = snapshotData['password'] as String?;
-    _city = snapshotData['city'] as String?;
-    _username = snapshotData['username'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -78,16 +72,14 @@ class UserDataRecord extends FirestoreRecord {
 
 Map<String, dynamic> createUserDataRecordData({
   String? email,
+  String? userName,
   String? password,
-  String? city,
-  String? username,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
       'email': email,
+      'user_name': userName,
       'password': password,
-      'city': city,
-      'username': username,
     }.withoutNulls,
   );
 
@@ -100,14 +92,13 @@ class UserDataRecordDocumentEquality implements Equality<UserDataRecord> {
   @override
   bool equals(UserDataRecord? e1, UserDataRecord? e2) {
     return e1?.email == e2?.email &&
-        e1?.password == e2?.password &&
-        e1?.city == e2?.city &&
-        e1?.username == e2?.username;
+        e1?.userName == e2?.userName &&
+        e1?.password == e2?.password;
   }
 
   @override
   int hash(UserDataRecord? e) =>
-      const ListEquality().hash([e?.email, e?.password, e?.city, e?.username]);
+      const ListEquality().hash([e?.email, e?.userName, e?.password]);
 
   @override
   bool isValidKey(Object? o) => o is UserDataRecord;

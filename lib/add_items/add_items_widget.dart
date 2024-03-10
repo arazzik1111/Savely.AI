@@ -1,3 +1,4 @@
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -369,49 +370,89 @@ class _AddItemsWidgetState extends State<AddItemsWidget> {
                 ),
                 Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
-                  child: FFButtonWidget(
-                    onPressed: () async {
-                      var confirmDialogResponse = await showDialog<bool>(
-                            context: context,
-                            builder: (alertDialogContext) {
-                              return AlertDialog(
-                                content: const Text('Items added successfuly'),
-                                actions: [
-                                  TextButton(
-                                    onPressed: () => Navigator.pop(
-                                        alertDialogContext, false),
-                                    child: const Text('Cancel'),
-                                  ),
-                                  TextButton(
-                                    onPressed: () =>
-                                        Navigator.pop(alertDialogContext, true),
-                                    child: const Text('Ok'),
-                                  ),
-                                ],
-                              );
-                            },
-                          ) ??
-                          false;
-                    },
-                    text: 'Add Item',
-                    options: FFButtonOptions(
-                      width: double.infinity,
-                      height: 50.0,
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: const Color(0xFF105DFB),
-                      textStyle:
-                          FlutterFlowTheme.of(context).titleMedium.override(
-                                fontFamily: 'Readex Pro',
-                                color: Colors.white,
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.w500,
-                              ),
-                      elevation: 2.0,
-                      borderRadius: BorderRadius.circular(14.0),
+                  child: StreamBuilder<List<ItemsRecord>>(
+                    stream: queryItemsRecord(
+                      singleRecord: true,
                     ),
+                    builder: (context, snapshot) {
+                      // Customize what your widget looks like when it's loading.
+                      if (!snapshot.hasData) {
+                        return Center(
+                          child: SizedBox(
+                            width: 50.0,
+                            height: 50.0,
+                            child: CircularProgressIndicator(
+                              valueColor: AlwaysStoppedAnimation<Color>(
+                                FlutterFlowTheme.of(context).primary,
+                              ),
+                            ),
+                          ),
+                        );
+                      }
+                      List<ItemsRecord> buttonItemsRecordList = snapshot.data!;
+                      // Return an empty Container when the item does not exist.
+                      if (snapshot.data!.isEmpty) {
+                        return Container();
+                      }
+                      final buttonItemsRecord = buttonItemsRecordList.isNotEmpty
+                          ? buttonItemsRecordList.first
+                          : null;
+                      return FFButtonWidget(
+                        onPressed: () async {
+                          await ItemsRecord.collection
+                              .doc()
+                              .set(createItemsRecordData(
+                                itemName: _model.textController1.text,
+                                price: double.tryParse(
+                                    _model.textController2.text),
+                                quantity:
+                                    int.tryParse(_model.textController3.text),
+                              ));
+                          var confirmDialogResponse = await showDialog<bool>(
+                                context: context,
+                                builder: (alertDialogContext) {
+                                  return AlertDialog(
+                                    content: const Text('Items added successfuly'),
+                                    actions: [
+                                      TextButton(
+                                        onPressed: () => Navigator.pop(
+                                            alertDialogContext, false),
+                                        child: const Text('Cancel'),
+                                      ),
+                                      TextButton(
+                                        onPressed: () => Navigator.pop(
+                                            alertDialogContext, true),
+                                        child: const Text('Ok'),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              ) ??
+                              false;
+
+                          context.pushNamed('OffersRestaurant');
+                        },
+                        text: 'Add Item',
+                        options: FFButtonOptions(
+                          width: double.infinity,
+                          height: 50.0,
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 0.0),
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 0.0),
+                          color: const Color(0xFF105DFB),
+                          textStyle:
+                              FlutterFlowTheme.of(context).titleMedium.override(
+                                    fontFamily: 'Readex Pro',
+                                    color: Colors.white,
+                                    fontSize: 18.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                          elevation: 2.0,
+                          borderRadius: BorderRadius.circular(14.0),
+                        ),
+                      );
+                    },
                   ),
                 ),
                 Divider(
@@ -421,8 +462,8 @@ class _AddItemsWidgetState extends State<AddItemsWidget> {
                 Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                   child: FFButtonWidget(
-                    onPressed: () {
-                      print('Button pressed ...');
+                    onPressed: () async {
+                      context.safePop();
                     },
                     text: 'Cancel',
                     options: FFButtonOptions(

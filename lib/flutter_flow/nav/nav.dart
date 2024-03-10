@@ -124,6 +124,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'AddItems',
           path: '/addItems',
           builder: (context, params) => const AddItemsWidget(),
+        ),
+        FFRoute(
+          name: 'OffersCopy',
+          path: '/offersCopy',
+          builder: (context, params) => const OffersCopyWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

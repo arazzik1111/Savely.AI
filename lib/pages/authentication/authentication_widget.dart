@@ -69,17 +69,20 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget>
     _model.passwordController1 ??= TextEditingController();
     _model.passwordFocusNode1 ??= FocusNode();
 
-    _model.emailAddressCreateController ??= TextEditingController();
-    _model.emailAddressCreateFocusNode ??= FocusNode();
+    _model.emailAddressCreateController1 ??= TextEditingController();
+    _model.emailAddressCreateFocusNode1 ??= FocusNode();
 
-    _model.emailController ??= TextEditingController();
-    _model.emailFocusNode ??= FocusNode();
+    _model.emailAddressCreateController2 ??= TextEditingController();
+    _model.emailAddressCreateFocusNode2 ??= FocusNode();
 
     _model.passwordController2 ??= TextEditingController();
     _model.passwordFocusNode2 ??= FocusNode();
 
     _model.passwordController3 ??= TextEditingController();
     _model.passwordFocusNode3 ??= FocusNode();
+
+    _model.emailAddressCreateController3 ??= TextEditingController();
+    _model.emailAddressCreateFocusNode3 ??= FocusNode();
   }
 
   @override
@@ -452,8 +455,8 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget>
                                                           0.0, 0.0, 0.0, 16.0),
                                                   child: FFButtonWidget(
                                                     onPressed: () async {
-                                                      context
-                                                          .pushNamed('Offers');
+                                                      context.pushNamed(
+                                                          'OffersCopy');
                                                     },
                                                     text: 'Sign In',
                                                     options: FFButtonOptions(
@@ -500,57 +503,6 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget>
                                                   ),
                                                 ),
                                               ),
-                                              Align(
-                                                alignment: const AlignmentDirectional(
-                                                    0.0, 0.0),
-                                                child: Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 0.0, 0.0, 16.0),
-                                                  child: FFButtonWidget(
-                                                    onPressed: () {
-                                                      print(
-                                                          'Button pressed ...');
-                                                    },
-                                                    text: 'Forgot Password',
-                                                    options: FFButtonOptions(
-                                                      width: 230.0,
-                                                      height: 44.0,
-                                                      padding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      iconPadding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      color: FlutterFlowTheme
-                                                              .of(context)
-                                                          .secondaryBackground,
-                                                      textStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium,
-                                                      elevation: 0.0,
-                                                      borderSide: BorderSide(
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .secondaryBackground,
-                                                        width: 2.0,
-                                                      ),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              12.0),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
                                             ],
                                           ).animateOnPageLoad(animationsMap[
                                               'columnOnPageLoadAnimation']!),
@@ -572,9 +524,9 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget>
                                                     width: double.infinity,
                                                     child: TextFormField(
                                                       controller: _model
-                                                          .emailAddressCreateController,
+                                                          .emailAddressCreateController1,
                                                       focusNode: _model
-                                                          .emailAddressCreateFocusNode,
+                                                          .emailAddressCreateFocusNode1,
                                                       autofocus: true,
                                                       autofillHints: const [
                                                         AutofillHints.username
@@ -662,7 +614,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget>
                                                                   context)
                                                               .primary,
                                                       validator: _model
-                                                          .emailAddressCreateControllerValidator
+                                                          .emailAddressCreateController1Validator
                                                           .asValidator(context),
                                                     ),
                                                   ),
@@ -675,9 +627,9 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget>
                                                     width: double.infinity,
                                                     child: TextFormField(
                                                       controller: _model
-                                                          .emailController,
-                                                      focusNode:
-                                                          _model.emailFocusNode,
+                                                          .emailAddressCreateController2,
+                                                      focusNode: _model
+                                                          .emailAddressCreateFocusNode2,
                                                       autofocus: true,
                                                       autofillHints: const [
                                                         AutofillHints.username
@@ -766,7 +718,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget>
                                                                   context)
                                                               .primary,
                                                       validator: _model
-                                                          .emailControllerValidator
+                                                          .emailAddressCreateController2Validator
                                                           .asValidator(context),
                                                     ),
                                                   ),
@@ -1020,7 +972,7 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget>
                                                 ),
                                                 FlutterFlowDropDown<String>(
                                                   controller: _model
-                                                          .cityValueController ??=
+                                                          .dropDownValueController ??=
                                                       FormFieldController<
                                                           String>(null),
                                                   options: const [
@@ -1031,8 +983,8 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget>
                                                     'Iasi (unavailable)'
                                                   ],
                                                   onChanged: (val) => setState(
-                                                      () => _model.cityValue =
-                                                          val),
+                                                      () => _model
+                                                          .dropDownValue = val),
                                                   width: 356.0,
                                                   height: 56.0,
                                                   textStyle:
@@ -1122,30 +1074,28 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget>
                                                         await userDataRecordReference
                                                             .set(
                                                                 createUserDataRecordData(
-                                                          username: _model
-                                                              .emailAddressCreateController
-                                                              .text,
                                                           email: _model
-                                                              .emailController
+                                                              .emailAddressCreateController2
+                                                              .text,
+                                                          userName: _model
+                                                              .emailAddressCreateController1
                                                               .text,
                                                           password: _model
                                                               .passwordController2
                                                               .text,
-                                                          city: '',
                                                         ));
                                                         _model.test = UserDataRecord
                                                             .getDocumentFromData(
                                                                 createUserDataRecordData(
-                                                                  username: _model
-                                                                      .emailAddressCreateController
-                                                                      .text,
                                                                   email: _model
-                                                                      .emailController
+                                                                      .emailAddressCreateController2
+                                                                      .text,
+                                                                  userName: _model
+                                                                      .emailAddressCreateController1
                                                                       .text,
                                                                   password: _model
                                                                       .passwordController2
                                                                       .text,
-                                                                  city: '',
                                                                 ),
                                                                 userDataRecordReference);
 
@@ -1205,6 +1155,102 @@ class _AuthenticationWidgetState extends State<AuthenticationWidget>
                                                       .accent4,
                                                 ),
                                               ],
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 0.0, 16.0),
+                                            child: SizedBox(
+                                              width: double.infinity,
+                                              child: TextFormField(
+                                                controller: _model
+                                                    .emailAddressCreateController3,
+                                                focusNode: _model
+                                                    .emailAddressCreateFocusNode3,
+                                                autofocus: true,
+                                                autofillHints: const [
+                                                  AutofillHints.username
+                                                ],
+                                                obscureText: false,
+                                                decoration: InputDecoration(
+                                                  labelText: 'Username',
+                                                  labelStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .labelMedium,
+                                                  enabledBorder:
+                                                      OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .alternate,
+                                                      width: 2.0,
+                                                    ),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            40.0),
+                                                  ),
+                                                  focusedBorder:
+                                                      OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
+                                                      width: 2.0,
+                                                    ),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            40.0),
+                                                  ),
+                                                  errorBorder:
+                                                      OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .error,
+                                                      width: 2.0,
+                                                    ),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            40.0),
+                                                  ),
+                                                  focusedErrorBorder:
+                                                      OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .error,
+                                                      width: 2.0,
+                                                    ),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            40.0),
+                                                  ),
+                                                  filled: true,
+                                                  fillColor:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .secondaryBackground,
+                                                  contentPadding:
+                                                      const EdgeInsets.all(24.0),
+                                                ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium,
+                                                keyboardType:
+                                                    TextInputType.name,
+                                                cursorColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                validator: _model
+                                                    .emailAddressCreateController3Validator
+                                                    .asValidator(context),
+                                              ),
                                             ),
                                           ),
                                         ],
