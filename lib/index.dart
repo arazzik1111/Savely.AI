@@ -11,4 +11,3 @@ export '/create_restaurant/create_restaurant_widget.dart'
 export '/offers_restaurant/offers_restaurant_widget.dart'
     show OffersRestaurantWidget;
 export '/add_items/add_items_widget.dart' show AddItemsWidget;
-export '/signup/signup_widget.dart' show SignupWidget;

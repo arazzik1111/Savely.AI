@@ -23,15 +23,14 @@ class AuthenticationModel extends FlutterFlowModel<AuthenticationWidget> {
   late bool passwordVisibility1;
   String? Function(BuildContext, String?)? passwordController1Validator;
   // State field(s) for emailAddress_Create widget.
-  FocusNode? emailAddressCreateFocusNode1;
-  TextEditingController? emailAddressCreateController1;
+  FocusNode? emailAddressCreateFocusNode;
+  TextEditingController? emailAddressCreateController;
   String? Function(BuildContext, String?)?
-      emailAddressCreateController1Validator;
-  // State field(s) for emailAddress_Create widget.
-  FocusNode? emailAddressCreateFocusNode2;
-  TextEditingController? emailAddressCreateController2;
-  String? Function(BuildContext, String?)?
-      emailAddressCreateController2Validator;
+      emailAddressCreateControllerValidator;
+  // State field(s) for email widget.
+  FocusNode? emailFocusNode;
+  TextEditingController? emailController;
+  String? Function(BuildContext, String?)? emailControllerValidator;
   // State field(s) for password widget.
   FocusNode? passwordFocusNode2;
   TextEditingController? passwordController2;
@@ -42,16 +41,11 @@ class AuthenticationModel extends FlutterFlowModel<AuthenticationWidget> {
   TextEditingController? passwordController3;
   late bool passwordVisibility3;
   String? Function(BuildContext, String?)? passwordController3Validator;
-  // State field(s) for DropDown widget.
-  String? dropDownValue;
-  FormFieldController<String>? dropDownValueController;
+  // State field(s) for city widget.
+  String? cityValue;
+  FormFieldController<String>? cityValueController;
   // Stores action output result for [Backend Call - Create Document] action in Button widget.
   UserDataRecord? test;
-  // State field(s) for emailAddress_Create widget.
-  FocusNode? emailAddressCreateFocusNode3;
-  TextEditingController? emailAddressCreateController3;
-  String? Function(BuildContext, String?)?
-      emailAddressCreateController3Validator;
 
   /// Initialization and disposal methods.
 
@@ -72,20 +66,17 @@ class AuthenticationModel extends FlutterFlowModel<AuthenticationWidget> {
     passwordFocusNode1?.dispose();
     passwordController1?.dispose();
 
-    emailAddressCreateFocusNode1?.dispose();
-    emailAddressCreateController1?.dispose();
+    emailAddressCreateFocusNode?.dispose();
+    emailAddressCreateController?.dispose();
 
-    emailAddressCreateFocusNode2?.dispose();
-    emailAddressCreateController2?.dispose();
+    emailFocusNode?.dispose();
+    emailController?.dispose();
 
     passwordFocusNode2?.dispose();
     passwordController2?.dispose();
 
     passwordFocusNode3?.dispose();
     passwordController3?.dispose();
-
-    emailAddressCreateFocusNode3?.dispose();
-    emailAddressCreateController3?.dispose();
   }
 
   /// Action blocks are added here.
