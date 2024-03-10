@@ -47,11 +47,6 @@ class AuthenticationModel extends FlutterFlowModel<AuthenticationWidget> {
   FormFieldController<String>? dropDownValueController;
   // Stores action output result for [Backend Call - Create Document] action in Button widget.
   UserDataRecord? test;
-  // State field(s) for emailAddress_Create widget.
-  FocusNode? emailAddressCreateFocusNode3;
-  TextEditingController? emailAddressCreateController3;
-  String? Function(BuildContext, String?)?
-      emailAddressCreateController3Validator;
 
   /// Initialization and disposal methods.
 
@@ -83,9 +78,6 @@ class AuthenticationModel extends FlutterFlowModel<AuthenticationWidget> {
 
     passwordFocusNode3?.dispose();
     passwordController3?.dispose();
-
-    emailAddressCreateFocusNode3?.dispose();
-    emailAddressCreateController3?.dispose();
   }
 
   /// Action blocks are added here.

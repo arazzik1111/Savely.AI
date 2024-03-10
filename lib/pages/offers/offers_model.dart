@@ -3,6 +3,10 @@ import 'offers_widget.dart' show OffersWidget;
 import 'package:flutter/material.dart';
 
 class OffersModel extends FlutterFlowModel<OffersWidget> {
+  ///  Local state fields for this page.
+
+  bool payment = false;
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

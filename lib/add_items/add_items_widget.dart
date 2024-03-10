@@ -368,92 +368,65 @@ class _AddItemsWidgetState extends State<AddItemsWidget> {
                   thickness: 1.0,
                   color: FlutterFlowTheme.of(context).accent4,
                 ),
-                Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
-                  child: StreamBuilder<List<ItemsRecord>>(
-                    stream: queryItemsRecord(
-                      singleRecord: true,
-                    ),
-                    builder: (context, snapshot) {
-                      // Customize what your widget looks like when it's loading.
-                      if (!snapshot.hasData) {
-                        return Center(
-                          child: SizedBox(
-                            width: 50.0,
-                            height: 50.0,
-                            child: CircularProgressIndicator(
-                              valueColor: AlwaysStoppedAnimation<Color>(
-                                FlutterFlowTheme.of(context).primary,
-                              ),
+                StreamBuilder<List<ItemsRecord>>(
+                  stream: queryItemsRecord(
+                    singleRecord: true,
+                  ),
+                  builder: (context, snapshot) {
+                    // Customize what your widget looks like when it's loading.
+                    if (!snapshot.hasData) {
+                      return Center(
+                        child: SizedBox(
+                          width: 50.0,
+                          height: 50.0,
+                          child: CircularProgressIndicator(
+                            valueColor: AlwaysStoppedAnimation<Color>(
+                              FlutterFlowTheme.of(context).primary,
                             ),
                           ),
-                        );
-                      }
-                      List<ItemsRecord> buttonItemsRecordList = snapshot.data!;
-                      // Return an empty Container when the item does not exist.
-                      if (snapshot.data!.isEmpty) {
-                        return Container();
-                      }
-                      final buttonItemsRecord = buttonItemsRecordList.isNotEmpty
-                          ? buttonItemsRecordList.first
-                          : null;
-                      return FFButtonWidget(
-                        onPressed: () async {
-                          await ItemsRecord.collection
-                              .doc()
-                              .set(createItemsRecordData(
-                                itemName: _model.textController1.text,
-                                price: double.tryParse(
-                                    _model.textController2.text),
-                                quantity:
-                                    int.tryParse(_model.textController3.text),
-                              ));
-                          var confirmDialogResponse = await showDialog<bool>(
-                                context: context,
-                                builder: (alertDialogContext) {
-                                  return AlertDialog(
-                                    content: const Text('Items added successfuly'),
-                                    actions: [
-                                      TextButton(
-                                        onPressed: () => Navigator.pop(
-                                            alertDialogContext, false),
-                                        child: const Text('Cancel'),
-                                      ),
-                                      TextButton(
-                                        onPressed: () => Navigator.pop(
-                                            alertDialogContext, true),
-                                        child: const Text('Ok'),
-                                      ),
-                                    ],
-                                  );
-                                },
-                              ) ??
-                              false;
-
-                          context.pushNamed('OffersRestaurant');
-                        },
-                        text: 'Add Item',
-                        options: FFButtonOptions(
-                          width: double.infinity,
-                          height: 50.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          color: const Color(0xFF105DFB),
-                          textStyle:
-                              FlutterFlowTheme.of(context).titleMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.white,
-                                    fontSize: 18.0,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                          elevation: 2.0,
-                          borderRadius: BorderRadius.circular(14.0),
                         ),
                       );
-                    },
-                  ),
+                    }
+                    List<ItemsRecord> buttonItemsRecordList = snapshot.data!;
+                    final buttonItemsRecord = buttonItemsRecordList.isNotEmpty
+                        ? buttonItemsRecordList.first
+                        : null;
+                    return FFButtonWidget(
+                      onPressed: () async {
+                        await ItemsRecord.collection
+                            .doc()
+                            .set(createItemsRecordData(
+                              itemName: _model.textController1.text,
+                              price:
+                                  double.tryParse(_model.textController2.text),
+                              quantity:
+                                  int.tryParse(_model.textController3.text),
+                            ));
+
+                        context.pushNamed('OffersRestaurant');
+                      },
+                      text: 'Add',
+                      options: FFButtonOptions(
+                        height: 40.0,
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            24.0, 0.0, 24.0, 0.0),
+                        iconPadding:
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: FlutterFlowTheme.of(context).primary,
+                        textStyle:
+                            FlutterFlowTheme.of(context).titleSmall.override(
+                                  fontFamily: 'Readex Pro',
+                                  color: Colors.white,
+                                ),
+                        elevation: 3.0,
+                        borderSide: const BorderSide(
+                          color: Colors.transparent,
+                          width: 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                    );
+                  },
                 ),
                 Divider(
                   thickness: 1.0,

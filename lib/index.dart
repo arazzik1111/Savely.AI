@@ -12,3 +12,4 @@ export '/offers_restaurant/offers_restaurant_widget.dart'
     show OffersRestaurantWidget;
 export '/add_items/add_items_widget.dart' show AddItemsWidget;
 export '/pages/offers_copy/offers_copy_widget.dart' show OffersCopyWidget;
+export '/payment/payment_widget.dart' show PaymentWidget;

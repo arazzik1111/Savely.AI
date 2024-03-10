@@ -194,13 +194,23 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                   Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 8.0, 16.0, 12.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(16.0),
-                                      child: Image.network(
-                                        'https://source.unsplash.com/random/1280x720?beach&9',
-                                        width: double.infinity,
-                                        height: 230.0,
-                                        fit: BoxFit.cover,
+                                    child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        context.pushNamed('Payment');
+                                      },
+                                      child: ClipRRect(
+                                        borderRadius:
+                                            BorderRadius.circular(16.0),
+                                        child: Image.network(
+                                          'https://images.unsplash.com/photo-1607532941433-304659e8198a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw0fHxzYWxhZHxlbnwwfHx8fDE3MDk5NTM3NTR8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                                          width: double.infinity,
+                                          height: 230.0,
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -213,7 +223,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                           MainAxisAlignment.spaceBetween,
                                       children: [
                                         Text(
-                                          'Maidstone, San Antonio, Tx.',
+                                          'Salad Pack, Iceberg Salad ',
                                           style: FlutterFlowTheme.of(context)
                                               .bodyLarge,
                                         ),
@@ -222,7 +232,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 0.0, 0.0),
                                           child: Text(
-                                            '\$210/night',
+                                            '10 Ron/pc',
                                             style: FlutterFlowTheme.of(context)
                                                 .titleLarge,
                                           ),
@@ -240,7 +250,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                       children: [
                                         Expanded(
                                           child: Text(
-                                            '32 miles away',
+                                            '3 left',
                                             style: FlutterFlowTheme.of(context)
                                                 .labelMedium,
                                           ),
@@ -276,14 +286,23 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 8.0, 16.0, 12.0),
-                                          child: ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(16.0),
-                                            child: Image.network(
-                                              'https://source.unsplash.com/random/1280x720?beach&5',
-                                              width: double.infinity,
-                                              height: 230.0,
-                                              fit: BoxFit.cover,
+                                          child: InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
+                                            onTap: () async {
+                                              context.pushNamed('Payment');
+                                            },
+                                            child: ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(16.0),
+                                              child: Image.network(
+                                                'https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw1fHxub29kbGV8ZW58MHx8fHwxNzEwMDYyNDk1fDA&ixlib=rb-4.0.3&q=80&w=1080',
+                                                width: double.infinity,
+                                                height: 230.0,
+                                                fit: BoxFit.cover,
+                                              ),
                                             ),
                                           ),
                                         ),
@@ -297,7 +316,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Text(
-                                                'Maidstone, San Antonio, Tx.',
+                                                'Noodle Pack, Noodle picant',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -307,7 +326,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                                     .fromSTEB(
                                                         16.0, 0.0, 0.0, 0.0),
                                                 child: Text(
-                                                  '\$210/night',
+                                                  '10Ron/pc',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .titleLarge,
@@ -327,7 +346,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                             children: [
                                               Expanded(
                                                 child: Text(
-                                                  '32 miles away',
+                                                  '5 left',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelMedium,
@@ -369,14 +388,23 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 8.0, 16.0, 12.0),
-                                          child: ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(16.0),
-                                            child: Image.network(
-                                              'https://source.unsplash.com/random/1280x720?beach&5',
-                                              width: double.infinity,
-                                              height: 230.0,
-                                              fit: BoxFit.cover,
+                                          child: InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
+                                            onTap: () async {
+                                              context.pushNamed('Payment');
+                                            },
+                                            child: ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(16.0),
+                                              child: Image.network(
+                                                'https://images.unsplash.com/photo-1513104890138-7c749659a591?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxwaXp6YXxlbnwwfHx8fDE3MTAwMTgyNDd8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                                                width: double.infinity,
+                                                height: 230.0,
+                                                fit: BoxFit.cover,
+                                              ),
                                             ),
                                           ),
                                         ),
@@ -390,7 +418,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Text(
-                                                'Maidstone, San Antonio, Tx.',
+                                                'Pizza Napo, Pizza peperoni',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -400,7 +428,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                                     .fromSTEB(
                                                         16.0, 0.0, 0.0, 0.0),
                                                 child: Text(
-                                                  '\$210/night',
+                                                  '10Ron/pc',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .titleLarge,
@@ -420,7 +448,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                             children: [
                                               Expanded(
                                                 child: Text(
-                                                  '32 miles away',
+                                                  '6 left',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelMedium,
@@ -462,14 +490,23 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 8.0, 16.0, 12.0),
-                                          child: ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(16.0),
-                                            child: Image.network(
-                                              'https://source.unsplash.com/random/1280x720?beach&5',
-                                              width: double.infinity,
-                                              height: 230.0,
-                                              fit: BoxFit.cover,
+                                          child: InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
+                                            onTap: () async {
+                                              context.pushNamed('Payment');
+                                            },
+                                            child: ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(16.0),
+                                              child: Image.network(
+                                                'https://images.unsplash.com/photo-1644032982093-b4a7b38935ea?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxOXx8a2ZjfGVufDB8fHx8MTcwOTk5NDEwOXww&ixlib=rb-4.0.3&q=85',
+                                                width: double.infinity,
+                                                height: 230.0,
+                                                fit: BoxFit.cover,
+                                              ),
                                             ),
                                           ),
                                         ),
@@ -483,7 +520,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Text(
-                                                'Maidstone, San Antonio, Tx.',
+                                                'KFC, hot pack box',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -493,7 +530,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                                     .fromSTEB(
                                                         16.0, 0.0, 0.0, 0.0),
                                                 child: Text(
-                                                  '\$210/night',
+                                                  '10Ron/pc',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .titleLarge,
@@ -513,7 +550,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                             children: [
                                               Expanded(
                                                 child: Text(
-                                                  '32 miles away',
+                                                  '4 left',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelMedium,
@@ -555,14 +592,23 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 8.0, 16.0, 12.0),
-                                          child: ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(16.0),
-                                            child: Image.network(
-                                              'https://source.unsplash.com/random/1280x720?beach&5',
-                                              width: double.infinity,
-                                              height: 230.0,
-                                              fit: BoxFit.cover,
+                                          child: InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
+                                            onTap: () async {
+                                              context.pushNamed('Payment');
+                                            },
+                                            child: ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(16.0),
+                                              child: Image.network(
+                                                'https://images.unsplash.com/photo-1619881589316-56c7f9e6b587?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxNnx8bWNkb3xlbnwwfHx8fDE3MDk5OTQzNDZ8MA&ixlib=rb-4.0.3&q=85',
+                                                width: double.infinity,
+                                                height: 230.0,
+                                                fit: BoxFit.cover,
+                                              ),
                                             ),
                                           ),
                                         ),
@@ -576,7 +622,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Text(
-                                                'Maidstone, San Antonio, Tx.',
+                                                'Mcdonald, Combobox',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -586,7 +632,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                                     .fromSTEB(
                                                         16.0, 0.0, 0.0, 0.0),
                                                 child: Text(
-                                                  '\$210/night',
+                                                  '10Ron/pc',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .titleLarge,
@@ -606,7 +652,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                             children: [
                                               Expanded(
                                                 child: Text(
-                                                  '32 miles away',
+                                                  '5 left',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelMedium,
@@ -648,14 +694,23 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 8.0, 16.0, 12.0),
-                                          child: ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(16.0),
-                                            child: Image.network(
-                                              'https://source.unsplash.com/random/1280x720?beach&5',
-                                              width: double.infinity,
-                                              height: 230.0,
-                                              fit: BoxFit.cover,
+                                          child: InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
+                                            onTap: () async {
+                                              context.pushNamed('Payment');
+                                            },
+                                            child: ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(16.0),
+                                              child: Image.network(
+                                                'https://images.unsplash.com/photo-1432139555190-58524dae6a55?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxOHx8ZnJpZSUyMHBvdGF0b3xlbnwwfHx8fDE3MTAwNjMwNDd8MA&ixlib=rb-4.0.3&q=85',
+                                                width: double.infinity,
+                                                height: 230.0,
+                                                fit: BoxFit.cover,
+                                              ),
                                             ),
                                           ),
                                         ),
@@ -669,7 +724,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Text(
-                                                'Maidstone, San Antonio, Tx.',
+                                                'Eva, Frie potato and porc',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -679,7 +734,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                                     .fromSTEB(
                                                         16.0, 0.0, 0.0, 0.0),
                                                 child: Text(
-                                                  '\$210/night',
+                                                  '10Ron/pc',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .titleLarge,
@@ -699,7 +754,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                             children: [
                                               Expanded(
                                                 child: Text(
-                                                  '32 miles away',
+                                                  '1 left',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelMedium,
@@ -741,14 +796,23 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 8.0, 16.0, 12.0),
-                                          child: ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(16.0),
-                                            child: Image.network(
-                                              'https://source.unsplash.com/random/1280x720?beach&5',
-                                              width: double.infinity,
-                                              height: 230.0,
-                                              fit: BoxFit.cover,
+                                          child: InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
+                                            onTap: () async {
+                                              context.pushNamed('Payment');
+                                            },
+                                            child: ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(16.0),
+                                              child: Image.network(
+                                                'https://images.unsplash.com/photo-1593001872095-7d5b3868fb1d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw1fHxmYWxhZmVsfGVufDB8fHx8MTcwOTk5NDUyNnww&ixlib=rb-4.0.3&q=85',
+                                                width: double.infinity,
+                                                height: 230.0,
+                                                fit: BoxFit.cover,
+                                              ),
                                             ),
                                           ),
                                         ),
@@ -762,7 +826,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Text(
-                                                'Maidstone, San Antonio, Tx.',
+                                                'Falafel, Meatball',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -772,7 +836,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                                     .fromSTEB(
                                                         16.0, 0.0, 0.0, 0.0),
                                                 child: Text(
-                                                  '\$210/night',
+                                                  '10Ron/pc',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .titleLarge,
@@ -792,7 +856,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                             children: [
                                               Expanded(
                                                 child: Text(
-                                                  '32 miles away',
+                                                  '6 left',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelMedium,
@@ -834,14 +898,23 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 8.0, 16.0, 12.0),
-                                          child: ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(16.0),
-                                            child: Image.network(
-                                              'https://source.unsplash.com/random/1280x720?beach&5',
-                                              width: double.infinity,
-                                              height: 230.0,
-                                              fit: BoxFit.cover,
+                                          child: InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
+                                            onTap: () async {
+                                              context.pushNamed('Payment');
+                                            },
+                                            child: ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(16.0),
+                                              child: Image.network(
+                                                'https://images.unsplash.com/photo-1628521061262-19b5cdb7eee5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxOHx8cmljZXxlbnwwfHx8fDE3MTAwNjMzNjd8MA&ixlib=rb-4.0.3&q=85',
+                                                width: double.infinity,
+                                                height: 230.0,
+                                                fit: BoxFit.cover,
+                                              ),
                                             ),
                                           ),
                                         ),
@@ -855,7 +928,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Text(
-                                                'Maidstone, San Antonio, Tx.',
+                                                'Place 700, Rice with meat',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -865,7 +938,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                                     .fromSTEB(
                                                         16.0, 0.0, 0.0, 0.0),
                                                 child: Text(
-                                                  '\$210/night',
+                                                  '10Ron/pc',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .titleLarge,
@@ -885,7 +958,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                             children: [
                                               Expanded(
                                                 child: Text(
-                                                  '32 miles away',
+                                                  '3 left',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelMedium,
@@ -927,14 +1000,23 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 8.0, 16.0, 12.0),
-                                          child: ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(16.0),
-                                            child: Image.network(
-                                              'https://source.unsplash.com/random/1280x720?beach&5',
-                                              width: double.infinity,
-                                              height: 230.0,
-                                              fit: BoxFit.cover,
+                                          child: InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
+                                            onTap: () async {
+                                              context.pushNamed('Payment');
+                                            },
+                                            child: ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(16.0),
+                                              child: Image.network(
+                                                'https://images.unsplash.com/photo-1612366747681-e4ca6992b1e9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw3fHxjcm9pc3NhbnR8ZW58MHx8fHwxNzEwMDYzNDg2fDA&ixlib=rb-4.0.3&q=85',
+                                                width: double.infinity,
+                                                height: 230.0,
+                                                fit: BoxFit.cover,
+                                              ),
                                             ),
                                           ),
                                         ),
@@ -948,7 +1030,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Text(
-                                                'Maidstone, San Antonio, Tx.',
+                                                'Ar_bakery, Croissant',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyLarge,
@@ -958,7 +1040,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                                     .fromSTEB(
                                                         16.0, 0.0, 0.0, 0.0),
                                                 child: Text(
-                                                  '\$210/night',
+                                                  '10Ron/pc',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .titleLarge,
@@ -978,7 +1060,7 @@ class _OffersCopyWidgetState extends State<OffersCopyWidget>
                                             children: [
                                               Expanded(
                                                 child: Text(
-                                                  '32 miles away',
+                                                  '10 left',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelMedium,

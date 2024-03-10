@@ -129,6 +129,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'OffersCopy',
           path: '/offersCopy',
           builder: (context, params) => const OffersCopyWidget(),
+        ),
+        FFRoute(
+          name: 'Payment',
+          path: '/payment',
+          builder: (context, params) => const PaymentWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
